@@ -20,6 +20,7 @@ p {
 a,
 .btn {
     transition: all 300ms ease;
+    align-self: left;
 }
 
 /* DESKTOP NAV */
@@ -194,14 +195,21 @@ section {
 .section__text {
     align-self: center;
     text-align: center;
+    display: flex;
+    /* New line: Use flexbox layout */
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section__text p {
     font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .section__text__p1 {
     text-align: center;
+    font-size: 1.75rem;
 }
 
 .section__text__p2 {
@@ -234,22 +242,34 @@ section {
 .butonPhotocards {
     display: inline-block;
     /* Display as inline block */
-    padding: 0.5rem 1rem;
+
+    padding: 5px 3px;
     /* Padding inside button */
+
     margin-top: 10px;
     /* Top margin for spacing */
+
     background-color: #fff;
     /* Background color */
+
     color: #000;
     /* Text color */
+
     text-decoration: none;
     /* Remove underline */
+
     font-weight: bold;
     /* Bold text */
+
     border-radius: 4px;
     /* Rounded corners */
+
     transition: background-color 0.3s ease-in-out;
     /* Smooth background color transition */
+
+    font-size: 7px;
+    align-self: left;
+
 }
 
 
@@ -264,7 +284,7 @@ section {
     /* Customize styles for the 'Read More' button to avoid affecting other buttons */
     display: inline-block;
     /* Display as inline block */
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.7rem;
     /* Padding inside button */
     margin-top: 10px;
     /* Top margin for spacing */
@@ -280,6 +300,11 @@ section {
     /* Rounded corners */
     transition: background-color 0.3s ease-in-out;
     /* Smooth background color transition */
+    font-size: 14px;
+}
+
+.section__text .butonPhotocards-read-more {
+    margin: 0 auto;
 }
 
 /* Hover Effect on 'Read More' button */
@@ -291,7 +316,7 @@ section {
 
 .btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     gap: 1rem;
 }
 
@@ -336,9 +361,10 @@ section {
 }
 
 /* ABOUT SECTION */
+
 /* Styling for Section with ID 'about' */
 #about {
-    padding: 8rem 0;
+    padding: 2rem 0;
     /* Add padding above and below the content */
     background-color: #f4f4f4;
     /* Set background color */
@@ -358,18 +384,25 @@ section {
 
 /* Styling for Photo Cards */
 .photoCards {
-    width: 280px;
+
+    width: 100px;
     /* Set width of the photo card */
-    height: 360px;
+
+    height: 150px;
     /* Set height of the photo card */
-    margin-bottom: 2rem;
+
+    margin-bottom: 1.5rem;
     /* Add bottom margin for spacing */
+
     position: relative;
     /* Set position relative for absolute positioning inside */
+
     overflow: hidden;
     /* Hide overflowing content */
+
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     /* Add box shadow for a subtle lift effect */
+
     transition: transform 0.3s ease-in-out;
     /* Add smooth transition for transform effect */
 }
@@ -393,13 +426,16 @@ section {
 /* Styling for Info Overlay */
 .info {
     position: absolute;
-    /* Position absolutely inside the parent */
-    bottom: 0;
-    /* Align at the bottom of the parent */
-    left: 0;
-    /* Align at the left of the parent */
+    bottom: 30%;
+    /* Align at the vertical center of the parent */
+    left: 50%;
+    /* Align at the horizontal center of the parent */
+    transform: translate(-50%, 50%);
+    /* Center the element */
     width: 100%;
     /* Occupy full width of parent */
+    text-align: center;
+    /* Center-align text */
     background-color: rgba(0, 0, 0, 0.7);
     /* Semi-transparent dark background */
     color: #fff;
@@ -422,13 +458,15 @@ section {
 .info h1,
 .info p {
     margin: 0;
+    font-size: 10px;
+    /* Heading*/
     /* Remove default margins */
 }
 
 .info p {
-    font-size: 14px;
+    font-size: 9px;
     /* Set font size for paragraph */
-    margin-top: 8px;
+    margin-top: 4px;
     /* Top margin for spacing */
 }
 
